@@ -53,6 +53,7 @@ defineReplace(copyAndroidSources) {
         return(first $${commandAlias})
     } else {
         first.depends += $${commandAlias}
+        export(first.depends)
         return($${commandAlias})
     }
 }
